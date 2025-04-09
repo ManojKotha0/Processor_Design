@@ -1,0 +1,88 @@
+// ld hazard
+
+    memory[0] = 8'h03;
+    memory[1] = 8'hA4;
+    memory[2] = 8'hA3;
+    memory[3] = 8'h00;
+    memory[4] = 8'hB3;
+    memory[5] = 8'h04;
+    memory[6] = 8'hA4;
+    memory[7] = 8'h00;
+    memory[8] = 8'hB3;
+
+    data_memory[17] = 64'h0000000000000010;
+
+    registers[7]  = 64'd7;
+    registers[8]  = 64'd0;
+    registers[9]  = 64'd0;
+    registers[10] = 64'd10;
+
+    // forwarding
+
+    registers[0]  = 64'd0;
+    registers[1]  = 64'd5;
+    registers[2]  = 64'd10;
+    registers[3]  = 64'd0;
+    registers[4]  = 64'd100;
+    registers[5]  = 64'd0;
+
+    memory[0] = 8'hB3;
+    memory[1] = 8'h81;
+    memory[2] = 8'h20;
+    memory[3] = 8'h00;
+    memory[4] = 8'hB3;
+    memory[5] = 8'h82;
+    memory[6] = 8'h41;
+    memory[7] = 8'h00;
+
+
+// control
+
+    registers[0]  = 64'd0;
+    registers[1]  = 64'd5;
+    registers[2]  = 64'd10;
+    registers[3]  = 64'd0;
+    registers[4]  = 64'd100;
+    registers[5]  = 64'd0;
+    registers[6]  = 64'd0;
+    registers[7]  = 64'd7;
+    registers[8]  = 64'd0;
+    registers[9]  = 64'd5;
+    registers[10] = 64'd10;
+
+    memory[0] = 8'h63;
+    memory[1] = 8'h8F;
+    memory[2] = 8'h51;
+    memory[3] = 8'h00;
+    memory[4] = 8'hB3;
+    memory[5] = 8'h81;
+    memory[6] = 8'h20;
+    memory[7] = 8'h00;
+    memory[8] = 8'hB3;
+    memory[9] = 8'h82;
+    memory[10] = 8'h41;
+    memory[11] = 8'h00;
+    memory[12] = 8'h7F;
+    memory[13] = 8'h00;
+    memory[14] = 8'h00;
+    memory[15] = 8'h00;
+    memory[60] = 8'h33;
+    memory[61] = 8'h85;
+    memory[62] = 8'hA4;
+    memory[63] = 8'h40;
+    memory[64] = 8'h00;
+    memory[65] = 8'h00;
+    memory[66] = 8'h00;
+    memory[67] = 8'h00;
+    memory[68] = 8'h00;
+    memory[69] = 8'h00;
+    memory[70] = 8'h00;
+    memory[71] = 8'h00;
+    memory[72] = 8'h00;
+    memory[73] = 8'h00;
+    memory[74] = 8'h00;
+    memory[75] = 8'h00;
+    memory[76] = 8'h7F;
+    memory[77] = 8'h00;
+    memory[78] = 8'h00;
+    memory[79] = 8'h00;
